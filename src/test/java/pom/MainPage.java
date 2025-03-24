@@ -20,7 +20,7 @@ public class MainPage {
 
     private final SelenideElement createButton = $("#create-btn");
 
-    private final SelenideElement submitButton = $("#form div.submit button");
+    private final SelenideElement submitButton = $x("//form//span[contains(text(), 'Save')]");
 
     private final SelenideElement firstName = $x("//form//span[contains(text(), 'Fist Name')]/following-sibling::input");
 
@@ -36,8 +36,7 @@ public class MainPage {
         createButton.shouldBe(visible).click();
         firstName.shouldBe(visible).sendKeys(firstNameDummie);
         login.shouldBe(visible).sendKeys(loginDummie);
-        submitButton.click();
-        waitAndGetStudentTitleByText(firstNameDummie);
+        submitButton.shouldBe(visible).click();
     }
 
     public String getUsernameLabelText() {

@@ -9,8 +9,7 @@ import static com.codeborne.selenide.Condition.visible;
 
 public class ProfilePage {
 
-    @FindBy(xpath = "//h3/following-sibling-sibling::div" +
-            "//div[contains(text(), 'Full name')]/following-sibling::div")
+    @FindBy(xpath = "//div[contains(text(), 'Full name')]/following-sibling::div")
     public SelenideElement fullNameInAdditionalInfo;
     @FindBy(css = "div.mdc-card h2")
     public SelenideElement fullNameInAvatarSection;

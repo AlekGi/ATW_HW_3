@@ -1,22 +1,18 @@
 package tests;
 
-import com.codeborne.selenide.Configuration;
+
+
 import com.codeborne.selenide.Selenide;
 import com.codeborne.selenide.WebDriverRunner;
 import org.junit.jupiter.api.*;
 import org.openqa.selenium.*;
-import org.openqa.selenium.chrome.ChromeDriver;
 import pom.LoginPage;
 import pom.MainPage;
-import org.openqa.selenium.support.ui.WebDriverWait;
 import pom.ProfilePage;
-
 import java.io.IOException;
 import java.net.MalformedURLException;
-import java.nio.file.Files;
-import java.nio.file.Path;
-import java.time.Duration;
 
+import static com.codeborne.selenide.Condition.visible;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
